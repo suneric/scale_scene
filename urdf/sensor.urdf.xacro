@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<robot name="camera" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+  <link name="world"/>
+
+  <xacro:include filename="$(find scale_scene)/urdf/camera.urdf.xacro"/>
+  <xacro:camera_macro parent="world">
+    <xacro:property name="lx" value="0" />
+    <xacro:property name="ly" value="0" />
+    <xacro:property name="lz" value="0" />
+    <xacro:property name="rr" value="0" />
+    <xacro:property name="rp" value="0" />
+    <xacro:property name="ry" value="3.1415926" />
+    <xacro:property name="camera_width" value="600" />
+    <xacro:property name="camera_height" value="480" />
+    <xacro:property name="camera_name" value="cam1"/>
+  </xacro:camera_macro>
+
+  <xacro:camera_macro parent="world">
+    <xacro:property name="lx" value="-95" />
+    <xacro:property name="ly" value="150" />
+    <xacro:property name="lz" value="-19" />
+    <xacro:property name="rr" value="0" />
+    <xacro:property name="rp" value="0" />
+    <xacro:property name="ry" value="3.1415926" />
+    <xacro:property name="camera_width" value="600" />
+    <xacro:property name="camera_height" value="480" />
+    <xacro:property name="camera_name" value="cam2"/>
+  </xacro:camera_macro>
+
+</robot>

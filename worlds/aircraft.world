@@ -1,0 +1,85 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name='airplane'>
+      <static>1</static>
+      <link name='link_airliner757'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <visual name='visual'>
+          <pose>50 0 50 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yufeng/catkin_ws/src/aircraft_scanning/aircraft_scanning_gazebo/Media/models/Airliner_757.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <pose frame=''>50 0 50 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yufeng/catkin_ws/src/aircraft_scanning/aircraft_scanning_gazebo/Media/models/Airliner_757.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='airplane1'>
+      <static>1</static>
+      <link name='link_airliner757'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yufeng/catkin_ws/src/aircraft_scanning/aircraft_scanning_gazebo/Media/models/Airliner_757.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>0</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/yufeng/catkin_ws/src/aircraft_scanning/aircraft_scanning_gazebo/Media/models/Airliner_757.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <gui fullscreen='0'>
+     <camera name='user_camera'>
+       <pose frame=''>60 -80 40 0 0.275643 2.21619</pose>
+       <view_controller>orbit</view_controller>
+       <projection_type>perspective</projection_type>
+     </camera>
+   </gui>
+  </world>
+</sdf>
